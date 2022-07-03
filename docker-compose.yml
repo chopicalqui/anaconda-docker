@@ -1,0 +1,14 @@
+version: "3.1"
+services:
+  anaconda:
+    container_name: anaconda
+    image: anaconda:latest
+    volumes:
+      - type: bind
+        source: /Users/lukasreiter/Documents/C_Training/2022_Python-for-Data Science-and-ML
+        target: /opt/notebook
+    build:
+      context: .
+    ports:
+      - 8888:8888
+    tty: True
